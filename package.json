@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "netlify-cms": "^2.9.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "^2.5.1",
+    "nuxt": "^2.5.1",
+    "vue-property-decorator": "^7.3.0"
+  }
+}
