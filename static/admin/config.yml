@@ -9,6 +9,7 @@ collections:
       - label: "About Page"
         name: "about"
         file: "content/about.json"
+        preview_path: "/"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}

@@ -1,5 +1,5 @@
 <template>
-  <div>homepage {{ foo }}</div>
+  <div>homepage {{ title }}</div>
 </template>
 
 <script lang="ts">
@@ -11,9 +11,7 @@ import HelloWorld from '~/components/HelloWorld.vue'
     HelloWorld
   },
   asyncData (stuff) {
-    return {
-      foo: 'bar'
-    }
+    return require('~/content/about.json')
   }
 })
 export default class Home extends Vue {
