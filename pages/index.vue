@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld />
+  <div>homepage {{ foo }}</div>
 </template>
 
 <script lang="ts">
@@ -9,6 +9,11 @@ import HelloWorld from '~/components/HelloWorld.vue'
 @Component({
   components: {
     HelloWorld
+  },
+  asyncData (stuff) {
+    return {
+      foo: 'bar'
+    }
   }
 })
 export default class Home extends Vue {
@@ -20,5 +25,11 @@ export default class Home extends Vue {
       ]
     }
   }
+
+  mounted () {
+    console.log('hey')
+  }
+
+
 }
 </script>
