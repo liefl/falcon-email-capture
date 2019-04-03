@@ -15,10 +15,8 @@ import HelloWorld from '~/components/HelloWorld.vue'
     return {
       content: require('~/content/about.json')
     }
-  }
-})
-export default class Home extends Vue {
-  public head () {
+  },
+  head () {
     return {
       meta: [
         { charset: 'utf-8' },
@@ -26,6 +24,9 @@ export default class Home extends Vue {
       ]
     }
   }
+})
+export default class Home extends Vue {
+
 
   get index () {
     return this.$store.state.index
