@@ -1,17 +1,20 @@
 <template>
-  <div>homepage {{ title }}</div>
+  <div>homepage {{ content.title }}: {{ index }}</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { mapState } from 'vuex'
 import HelloWorld from '~/components/HelloWorld.vue'
 
 @Component({
   components: {
     HelloWorld
   },
-  asyncData (stuff) {
-    return require('~/content/about.json')
+  asyncData () {
+    return {
+      content: require('~/content/about.json')
+    }
   }
 })
 export default class Home extends Vue {
@@ -24,8 +27,12 @@ export default class Home extends Vue {
     }
   }
 
+  get index () {
+    return this.$store.state.index
+  }
+
   mounted () {
-    console.log('hey')
+    console.log(this.$store)
   }
 
 
